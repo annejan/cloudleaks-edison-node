@@ -1,0 +1,18 @@
+{
+  "name": "clit",
+  "description": "Cloud Leaks Internet Toilet.",
+  "tags": [
+    "toilet",
+    "simple",
+    "util",
+    "utility"
+  ],
+  "version": "0.2.3",
+  "author": "Anne Jan Brouwer <brouwer@annejan.com>",
+  "dependencies": {
+    "request": "^2.72.0"
+  },
+  "scripts": {
+    "start": "node cloudleaks.js"
+  }
+}
