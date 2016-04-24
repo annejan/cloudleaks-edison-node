@@ -33,6 +33,7 @@ var toiletkey = 'jaeceifaexoonahsohgheCheiludaSeebaey2IiZaeCh1Zaph0aiveec4hohph3
 
 // requests
 var request = require('request');
+var spawn = require('child_process').spawn;
 
 // Load lcd module on I2C
 var LCD = require('jsupm_i2clcd');
@@ -100,9 +101,10 @@ var myInterval = setInterval(function()
 
 	request.post('https://cloudleaks.org/sample/create', {form: data}, function (error, response, body) {
 	        if (!error && response.statusCode == 200) {
-	            console.log(body)
+	            	console.log(body)
 		} else {
-	            console.log(body)
+	            	console.log(body)
+			var bleep = spawn('python', ['bleepbloop.py']);
 		}	
         });
 }, 5000);
